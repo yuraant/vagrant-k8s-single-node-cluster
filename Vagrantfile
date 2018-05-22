@@ -27,7 +27,7 @@ echo This VM has IP address $IPADDR
 # Set up Kubernetes
 NODENAME=$(hostname -s)
 echo Node has name $NODENAME
-kubeadm init --apiserver-cert-extra-sans=$IPADDR  --node-name $NODENAME
+kubeadm init --apiserver-cert-extra-sans=$IPADDR  --apiserver-advertise-address=$IPADDR --node-name $NODENAME
 
 # Set up admin creds for the vagrant user
 echo Copying credentials to /home/vagrant...
