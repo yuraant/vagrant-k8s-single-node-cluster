@@ -28,7 +28,7 @@ Copy credentials to your host machine
 ```
 scp -P 2222 -i .vagrant/machines/default/virtualbox/private_key vagrant@127.0.0.1:/home/vagrant/.kube/config .
 ```
-Example of connection to your single node cluser using Kubctl on you host
+Example of connection to your single node cluser using Kubectl on you host
 ```
 kubectl --kubeconfig ./config get nodes
 ```
